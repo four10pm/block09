@@ -1,0 +1,113 @@
+/* background = entire 3x3 grid */
+.background {
+    display: grid;
+    grid-template: 1fr 2fr 1fr/1fr 1fr 1fr; 
+    overflow: hidden;
+}
+
+/* sky = top row, blue sky with clouds  */
+.sky {
+    background-color: #87ceeb;
+    grid-column: 1/4;
+    display: flex;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/012/595/167/small/realistic-white-cloud-png.png);
+    background-repeat:round; 
+}
+
+/*  bluesky = row 1, column 1 & 3 */
+.bluesky { 
+    width: 33vw;
+    display: flex; 
+    justify-content: center;
+}
+
+/* backgroundclouds = cloud image in BLUESKY & CLOUDS */
+.backgroundclouds {
+    height: 100%; 
+    opacity: .5; 
+    z-index: 0; 
+   justify-self: space-around;
+}
+
+/* clouds = row 1, column 2 */
+.clouds {
+    justify-content: center;
+    grid-column: 2/span 1;
+    display: flex;
+    width: 50%;
+    padding-left: 10vw;
+ }
+
+/* whitecloud = cloud image in CLOUDS */
+#whitecloud {
+    opacity: .75;
+    z-index: 1;  
+    height: 120%;
+    margin: -2vw auto auto 2vw;
+}
+
+.pinksky {
+    grid-column: 1/4; 
+    background: rgb(238,174,202);
+    background: linear-gradient(0deg, rgba(238,174,202,1) 0%, rgba(135,206,235,1) 80%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.sunsetclouds {
+    opacity: .75;
+    width: 150%;
+    height: 100%;
+}
+
+.silhouette {
+    background-color: rgb(238,174,202);
+    grid-column: 1/4; 
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/015/337/922/small/mountain-silhouette-mountain-icon-free-png.png);
+    background-repeat: round;
+    display: flex;
+    align-content: space-evenly; 
+    z-index: 0;
+}
+
+.mountainsfront{
+    opacity: .75;
+    z-index: 1;
+}
+
+form {
+    background-color: black;
+    color: skyblue;
+    border: skyblue dotted 2px;
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+label {
+    color: rgb(238,174,202);
+}
+
+.formfield {
+    margin: auto 0;
+}
+
+#submitbutton {
+    margin: 10px; 
+    background-color: skyblue;
+    border: skyblue outset 2px;
+}
+
+@media(max-width:768px) {
+    form {
+        display: block;
+    }
+}
+@media(min-width:768px) {
+    form {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+}
